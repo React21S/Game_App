@@ -1,0 +1,27 @@
+
+
+.circle{
+        width: 200px;
+        height: 200px;
+        margin-bottom: 40px;
+        border-radius: 50%;
+        /* background-color: var(--ancient-2); */
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+}
+
+.green{
+    background-color: var(--neutral-1);
+}
+.blue{
+    background-color: var(--neutral-2);
+}
+.red{
+    background-color: var(--neutral-3);
+}
+
+.gray{
+    background-color: var(--neutral-4);
+}

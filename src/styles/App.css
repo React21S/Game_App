@@ -1,0 +1,125 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Roboto&family=Special+Elite&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color:linear-gradient(to bottom left, #dbc4c4, #e7e73f, green);
+  /* --bg-color: linear-gradient(to right bottom, #532623, #975420, #bb9900, #a8eb12); */
+ 
+
+   --light-text: white;
+   --light-text-2: #e04242;
+   --light-gray:lightgray;
+
+   --white:#f7f3f3;
+   --black:black;
+ 
+   --bg-color-1:#0b520b;
+   --bg-color-2:#333333e6;
+   --bg-color-3:#becf21;
+   --bg-color-4:#0b213b80;
+   --bg-color-5:#0b520b;
+ 
+   --color-1:#7290be;
+  --color-2:#cecece;
+  --color-3:#f5f5f5;
+  --color-4:#333;
+ 
+   --font-1: 'Caveat', cursive;
+   --font-2:'Roboto', sans-serif;
+   --font-3:'Special Elite', cursive;
+ 
+   --ancient-1:#e9d8a6;
+   --ancient-2:#ee9b00;
+   --ancient-3:#94d2bd;
+   --ancient-4:#0a9396;
+   --ancient-4:#005f73;
+
+   --neutral-1:#00b4d8;
+   --neutral-2:#0096c7;
+   --neutral-3:#0077b6;
+   --neutral-4:#023e8a;
+   --neutral-5:#03045e;
+
+
+
+}
+
+body{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: var(--bg-color);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  text-align: center;
+ 
+}
+
+
+/* ####### Button ###### */
+
+button{
+  background-color: var(--white);
+  color:var(--black);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px var(--color-4);
+  padding: 2rem 3rem;
+  margin: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: var(--font-3);
+}
+
+h1, p{
+  padding: 2rem;
+  font-family: var(--font-3);
+}
+h1{
+  font-size: 4rem;
+}
+
+p{
+  font-size: 3rem;
+}
+
+
+header{
+  padding: 30px;
+  text-align: center;
+  font-size: 40px;
+  background-color: var(--bg-color-3);
+  color: var(--black);
+  width: 100%;
+  text-transform: uppercase;
+  font-family: var(--font-3);
+}
+
+
+footer{
+  font-family: var(--font-2);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  text-align: center;
+  color: var(--black);
+  background-color: var(--bg-color-3);
+}
+
+footer{ 
+  position: fixed;
+}
+footer p{ 
+  font-family: var(--font-2);
+  font-size: 1rem;
+}
+
+
