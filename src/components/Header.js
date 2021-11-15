@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => {
     return (
         <div>
-            <header>Application Form</header>
+            <header> Game App </header>
         </div>
     );
 };

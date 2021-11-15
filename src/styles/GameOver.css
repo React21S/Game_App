@@ -1,0 +1,43 @@
+
+.overlay button{
+    background-color: var(--bg-color-1);
+    color:var(--white);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--color-4);
+    padding:0.6rem;
+    margin:0 auto;
+    font-size: 30px;
+    float: right;
+    margin-top: 1px;
+    text-align: center;
+}
+
+  .popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-color-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .overlay{
+    background-color: var(--bg-color-3);
+    color:var(--black);
+    padding: 30px;
+    width:60%;
+    height: 20%;
+    position: relative;
+    top:0;
+    left:0;
+    border-radius: 10px;
+  }
+  
+
+
+  
+

@@ -2,9 +2,13 @@ import React from 'react';
 
 const Circle = (props) => {
     return (
-        <div className={`circle ${props.color}`} >
-           <p> {props.id}</p>
-        </div>
+         <div
+        style={{ backgroundColor: props.color }}
+        className={`circle ${props.active ? "active" : ""}`}
+        onClick={props.click}
+      >
+        <p> {props.id}</p>
+      </div>
     );
 };
 
