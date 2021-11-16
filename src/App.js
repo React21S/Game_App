@@ -16,6 +16,8 @@ class App extends Component {
     current:0,
     showGameOver: false, 
     pace:1500,
+    rounds:0,
+    gameStart:false
   }
 
   timer=undefined;
@@ -23,17 +25,24 @@ class App extends Component {
 
   // clickHandler handler
   clickHandler = (id)=>{
+    // To stop the game if click wrong button
     if(this.state.current !==id){
       this.stopHandler();
       return;
     }
   this.setState({
     score:this.state.score+10,
+    rounds:0, 
   })
   };
 
   // active area for game highlighted handler
   nextCircle =()=>{
+    // To stop the game if start button does not click
+    if(this.state.rounds >= 5){
+      this.stopHandler();
+      return;
+    }
     let nextActive;
     do {
       nextActive=getRndInteger(1, 4)
@@ -42,6 +51,7 @@ class App extends Component {
     this.setState({
       current:nextActive,
       pace: this.state.pace * 0.95,
+      rounds:this.state.rounds + 1,
     });
     this.timer = setTimeout(this.nextCircle, this.state.pace)
   };
@@ -49,6 +59,7 @@ class App extends Component {
   // Start Handler
   startHandler=()=>{
     this.nextCircle();
+    this.setState({gameStart:true})
   };
 
   // Stop Handler
@@ -56,18 +67,21 @@ class App extends Component {
     clearTimeout(this.timer);
     this.setState({
       showGameOver:true,  
-      current:0
+      current:0,
+      gameStart:false,
     })
   };
 
-  // close Handler
+  // Close Handler
   closeHandler =()=>{
   this.setState({
     showGameOver:false, 
     score:0, 
     pace:1500,
+    rounds:0,
   })
   };
+
 
   // Render 
   render() {
@@ -97,7 +111,7 @@ class App extends Component {
           
           <p>Your Score : {this.state.score}</p>
           <div>
-            <button type="submit" onClick={this.startHandler}>Start Game</button>
+            <button disabled={this.state.gameStart} type="submit" onClick={this.startHandler}>Start Game</button>
             <button onClick={this.stopHandler}>End Game</button>
           </div>
         </div>
