@@ -28,9 +28,9 @@
   .overlay{
     background-color: var(--bg-color-3);
     color:var(--black);
-    padding: 30px;
+    padding: 20px;
     width:60%;
-    height: 20%;
+    height: 30%;
     position: relative;
     top:0;
     left:0;

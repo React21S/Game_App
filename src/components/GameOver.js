@@ -1,16 +1,16 @@
 import React from 'react';
 
 
-const closePopupHandler=()=>{
-    window.location.reload();
-}
+// const closePopupHandler=()=>{
+//     window.location.reload();
+// }
 
 const GameOver = (props) => {
 
     return (
         <div className="popup">
             <div className="overlay">
-            <button onClick={closePopupHandler}>X</button>
+            <button onClick={props.close}>X</button>
                 <h1> Game Over </h1>
                 <div>
                     <p> Your Score was : <span>{props.score} </span></p>

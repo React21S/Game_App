@@ -15,51 +15,70 @@ class App extends Component {
     score:0,
     current:0,
     showGameOver: false, 
+    pace:1500,
   }
 
+  timer=undefined;
 
 
-
-timer=undefined;
-pace = 1500;
-
-// clickHandler handler
-clickHandler = ()=>{
-this.setState({
-  score:this.state.score+10,
-})
-}
-
-nextCircle =()=>{
-  let nextActive;
-  do {
-    nextActive=getRndInteger(1, 4)
-  } while (nextActive ===this.state.current);
-
+  // clickHandler handler
+  clickHandler = (id)=>{
+    if(this.state.current !==id){
+      this.stopHandler();
+      return;
+    }
   this.setState({
-    current:nextActive
-  });
+    score:this.state.score+10,
+  })
+  };
 
-  this.pace *=0.95;
-  this.timer = setTimeout(this.nextCircle, this.pace)
-};
+  // active area for game highlighted handler
+  nextCircle =()=>{
+    let nextActive;
+    do {
+      nextActive=getRndInteger(1, 4)
+    } while (nextActive ===this.state.current);
 
-// Start Handler
-startHandler=()=>{
-  this.nextCircle();
-}
+    this.setState({
+      current:nextActive,
+      pace: this.state.pace * 0.95,
+    });
+    this.timer = setTimeout(this.nextCircle, this.state.pace)
+  };
 
-// Stop Handler
-stopHandler=()=>{
-  clearTimeout(this.timer);
-  this.setState({showGameOver:true})
-}
+  // Start Handler
+  startHandler=()=>{
+    this.nextCircle();
+  };
+
+  // Stop Handler
+  stopHandler=()=>{
+    clearTimeout(this.timer);
+    this.setState({
+      showGameOver:true,  
+      current:0
+    })
+  };
+
+  // close Handler
+  closeHandler =()=>{
+  this.setState({
+    showGameOver:false, 
+    score:0, 
+    pace:1500,
+  })
+  };
+
+  // Render 
   render() {
     return (
       <div className="App">
         <Header/>
         <div>
-          {this.state.showGameOver && <GameOver score={this.state.score}/>}
+          {this.state.showGameOver && <GameOver 
+          score={this.state.score} 
+          close={this.closeHandler}/>}
+
           <h1>Speed Counter Game </h1>
       
           <div className="circles">
@@ -68,7 +87,7 @@ stopHandler=()=>{
                 key={circle.id} 
                 color={circle.color} 
                 id={circle.id} 
-                click={this.clickHandler}
+                click={()=>this.clickHandler(circle.id)}
                
               active={this.state.current === circle.id}
                 />
