@@ -150,6 +150,10 @@ header{
   font-family: var(--font-3);
 }
 
+.app h1::before{
+  content: "";
+  background-color:🤛 ;
+}
 
 footer{
   font-family: var(--font-2);

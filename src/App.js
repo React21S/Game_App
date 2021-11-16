@@ -6,6 +6,12 @@ import Circle from './components/Circle';
 import {circles} from "./components/circles";
 import GameOver from './components/GameOver';
 
+import startGameSound from "./assets/sounds/startGame.wav";
+import stopGameSound from "./assets/sounds/endGame.wav";
+
+let startSound = new Audio(startGameSound);
+let endGameSound = new Audio(stopGameSound)
+
 const getRndInteger=(min, max) =>{
   return Math.floor(Math.random() * (max - min + 1) ) + min;
 };
@@ -22,6 +28,14 @@ class App extends Component {
 
   timer=undefined;
 
+  //   // clickPlay handler
+  // clickPlay =()=>{
+  //   if(clickSound.paused){
+  //     clickSound.paly();
+  //   } else{
+  //     clickSound.currenTime =0
+  //   }
+  // };
 
   // clickHandler handler
   clickHandler = (id)=>{
@@ -45,7 +59,7 @@ class App extends Component {
     }
     let nextActive;
     do {
-      nextActive=getRndInteger(1, 4)
+      nextActive=getRndInteger(1, 5)
     } while (nextActive ===this.state.current);
 
     this.setState({
@@ -58,12 +72,16 @@ class App extends Component {
 
   // Start Handler
   startHandler=()=>{
+    // clickSound.loop = true
+    startSound.play();
     this.nextCircle();
     this.setState({gameStart:true})
   };
 
   // Stop Handler
   stopHandler=()=>{
+    startSound.pause();
+    endGameSound.play();
     clearTimeout(this.timer);
     this.setState({
       showGameOver:true,  
@@ -93,17 +111,18 @@ class App extends Component {
           score={this.state.score} 
           close={this.closeHandler}/>}
 
-          <h1>Speed Counter Game </h1>
+          <h1> 🤜 Punch the Snowman game 🤛</h1>
       
           <div className="circles">
             {
-              circles.map(circle=>(<Circle 
+              circles.map(circle=>(
+              <Circle 
                 key={circle.id} 
                 color={circle.color} 
                 id={circle.id} 
                 click={()=>this.clickHandler(circle.id)}
-               
-              active={this.state.current === circle.id}
+                active={this.state.current === circle.id}
+                disabled={this.state.gameStart}
                 />
               ))
             }
