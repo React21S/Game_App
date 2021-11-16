@@ -111,7 +111,7 @@ class App extends Component {
           score={this.state.score} 
           close={this.closeHandler}/>}
 
-          <h1> 🤜 Punch the Snowman game 🤛</h1>
+          <h1> 👆Touch the Snowman game 👆</h1>
       
           <div className="circles">
             {

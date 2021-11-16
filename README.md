@@ -1,14 +1,16 @@
-# Speed Game App
+# Touch Game App
 - A game app built with class and function components, key and map function, props at Business college Helsinki. 
 ---
+If the user does not touch the highlighted circle after five counts, the game will be over, and the user gets 0 points.
 
+---
 ### User interface
-- The game (UI) displays circles 1 to 4, the score from the user, start and end game button, where the user can click on the start game button, then follow the highlight circle by clicking on any highlighted.  
+- The game (UI) displays circles 1 to 5, the score from the user, start and end game button, where the user can click on the start game button, then follow the highlight circle by touching on any highlighted.
 ![Game-app-screenshot](/img/UI.png)
 
 ---
 ### Start game
-- The game will start with a lower speed, as the user gets more points by clicking on the circle, and at the random selection, the circle highlighted moves faster.
+- The game will start with a lower speed, as the user gets more points by touching on the circle, and at the random selection, the circle highlighted moves faster.
 ![Game-app-screenshot](/img/Highlighted.png)
 
 ---
