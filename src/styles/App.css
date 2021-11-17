@@ -111,19 +111,19 @@ body{
 
 
 /* ####### Button ###### */
-
-button{
-  background-color: var(--white);
-  color:var(--black);
+button {
+  font-family: "Special Elite", cursive;
   border: none;
-  border-radius: 5px;
-  box-shadow: 0 0 5px var(--color-4);
+  background-color: var(--white);
+  font-family: var(--font-3);
   padding: 2rem 3rem;
   margin: 20px;
-  font-size: 20px;
+  box-shadow: 0 0 5px var(--color-4);
+  border-radius: 5px;
   text-transform: uppercase;
-  font-family: var(--font-3);
+  font-size: 20px;
   cursor: pointer;
+
 }
 
 h1, p{
@@ -138,7 +138,7 @@ p{
   font-size: 3rem;
 }
 
-
+/* ####### Header ###### */
 header{
   padding: 30px;
   text-align: center;
@@ -155,12 +155,12 @@ header{
   background-color:🤛 ;
 }
 
+/* ####### Footer ###### */
 footer{
   font-family: var(--font-2);
   width: 100%;
   position: absolute;
   bottom: 0;
-  padding: 20px;
   text-align: center;
   color: var(--black);
   background-color: var(--bg-color-3);
@@ -172,3 +172,58 @@ footer p{
   font-size: 1rem;
 }
 
+
+
+
+/* ------############# Mobile size iphone 5/SE #############-----------*/
+
+@media screen and (max-width: 568px){
+  header{
+    padding: 30px;
+    text-align: center;
+    background-color: var(--bg-color-3);
+    color: var(--black);
+    width: 100%;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family: var(--font-3);
+  }
+  footer{
+    padding: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+
+  h1{
+    padding: 30px;
+    font-size: 1rem;
+  }
+
+  p{
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 0.3rem 0.5rem;
+    margin: 10px;
+  }
+}
+
+/* ------############# Ipad #############-----------*/
+@media screen and (min-width: 568px) and (max-width: 1024px) {
+  h1{
+    padding: 35px;
+    font-size: 3rem;
+  }
+
+  p{
+    padding: 4rem;
+    font-size: 2rem;
+  }
+  button {
+    padding: 1rem 1rem;
+    margin: 20px;
+  }
+
+}

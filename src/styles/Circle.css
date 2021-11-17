@@ -43,9 +43,36 @@
     border: 25px solid var(--white);
     background-image: url('/src/assets/image/snowman.png');
     background-size: 100%;
-    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='93' height='112' viewport='0 0 100 100' style='fill:black;font-size:56px;'><text y='50%'>👆</text></svg>") 16 0,auto; /*!emojicursor.app*/
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='93' height='112' viewport='0 0 100 100' style='fill:black;font-size:56px;'><text y='50%'>👆</text></svg>") 16 0,auto;
 }
 
 
 
+/* ------############# Mobile size iphone 5/SE #############-----------*/
 
+@media screen and (max-width: 568px){
+    .circle{
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+    }
+
+    .active{
+        box-shadow: 0 0 25px var(--ancient-2);
+        border: 25px solid var(--white);
+        background-image: url('/src/assets/image/snowman.png');
+        background-size: 50%;
+        cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='93' height='112' viewport='0 0 100 100' style='fill:black;font-size:56px;'><text y='50%'>👆</text></svg>") 16 0,auto;
+    }
+
+    
+}
+
+/* ------############# Ipad #############-----------*/
+@media screen and (min-width: 568px) and (max-width: 1024px) {
+     .circle{
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+    }
+}

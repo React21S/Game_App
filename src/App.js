@@ -28,17 +28,18 @@ class App extends Component {
 
   timer=undefined;
 
-  //   // clickPlay handler
-  // clickPlay =()=>{
-  //   if(clickSound.paused){
-  //     clickSound.paly();
-  //   } else{
-  //     clickSound.currenTime =0
-  //   }
-  // };
+    // click start play handler
+  clickPlay =()=>{
+    if(startSound.paused){
+      startSound.play();
+    } else{
+      startSound.currentTime =0
+    }
+  };
 
   // clickHandler handler
   clickHandler = (id)=>{
+    this.clickPlay();
     // To stop the game if click wrong button
     if(this.state.current !==id){
       this.stopHandler();
