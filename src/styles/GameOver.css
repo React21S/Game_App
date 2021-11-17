@@ -38,5 +38,36 @@
 } 
   
 
+/* ------############# mobile #############-----------*/
 
+
+@media (max-width: 320px) {
+  .overlay{
+  padding: 20px;
+  width:50%;
+  height: 40%;
+  }
+
+  .overlay button{
+    padding:0.6rem;
+    font-size: 10px;
+    top: 3px;
+    right: 10px; 
+  }
+}
+
+/* ------############# Ipad Pro #############-----------*/
+@media  screen and (min-width: 321px) and (max-width: 768px) {
+  .overlay{
+    padding: 10px;
+    width:50%;
+    height: 40%;
+    }
   
+    .overlay button{
+      padding:0.6rem;
+      font-size: 10px;
+      top: 3px;
+      right: 10px; 
+    }
+}
