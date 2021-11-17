@@ -2,8 +2,8 @@
 
 .circle{
     color: var(--white);
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     margin-bottom: 40px;
     border-radius: 50%;
     display: inline-flex;
