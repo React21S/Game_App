@@ -104,7 +104,6 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  margin: 0;
   text-align: center;
  
 }
@@ -140,7 +139,7 @@ p{
 
 /* ####### Header ###### */
 header{
-  padding: 30px;
+  padding: 20px;
   text-align: center;
   background-color: var(--bg-color-3);
   color: var(--black);
@@ -177,7 +176,7 @@ footer p{
 
 /* ------############# Mobile size iphone 5/SE #############-----------*/
 
-@media screen and (max-width: 568px){
+@media screen and (max-width: 768px){
   header{
     padding: 30px;
     text-align: center;
@@ -211,7 +210,7 @@ footer p{
 }
 
 /* ------############# Ipad #############-----------*/
-@media screen and (min-width: 568px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   h1{
     padding: 35px;
     font-size: 3rem;
@@ -224,6 +223,12 @@ footer p{
   button {
     padding: 1rem 1rem;
     margin: 20px;
+  }
+  footer{
+    padding: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
   }
 
 }
