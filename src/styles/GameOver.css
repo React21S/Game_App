@@ -41,7 +41,7 @@
 /* ------############# mobile #############-----------*/
 
 
-@media (max-width: 320px) {
+@media (max-width: 414px) {
   .overlay{
   padding: 20px;
   width:50%;
@@ -57,7 +57,7 @@
 }
 
 /* ------############# Ipad Pro #############-----------*/
-@media  screen and (min-width: 321px) and (max-width: 768px) {
+@media  screen and (min-width: 540px) and (max-width: 768px) {
   .overlay{
     padding: 10px;
     width:50%;

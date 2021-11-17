@@ -203,7 +203,7 @@ footer p{
 }
 
 /* ------############# Ipad #############-----------*/
-@media screen and(min-width: 321px) and (max-width: 768px) {
+@media  (max-width: 768px) {
   h1{
     padding: 15px;
     font-size: .8rem;
