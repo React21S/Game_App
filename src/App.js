@@ -9,6 +9,7 @@ import GameOver from './components/GameOver';
 import startGameSound from "./assets/sounds/startGame.wav";
 import stopGameSound from "./assets/sounds/endGame.wav";
 
+
 let startSound = new Audio(startGameSound);
 let endGameSound = new Audio(stopGameSound)
 
