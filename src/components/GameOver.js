@@ -1,30 +1,24 @@
 import React from 'react';
 
-
-// const closePopupHandler=()=>{
-//     window.location.reload();
-// }
-
 const GameOver = (props) => {
-    let comments ="";
-    if (props.score <= 60){
-        comments = "You can do better 😀 ";
-    }
-    else if(props.score>=60 && props.score <=90){
-        comments = " You almost get to 100 😁"
-    }
-    else if(props.score>=90 && props.score <=120){
-        comments = " You can do better 👏 "
-    }
-    else if(props.score>=120 && props.score <=150){
-        comments = "Well done 🍕"
-    }
-    else if(props.score>=150 && props.score <=200){
-        comments = "WOW you are game Player 🍷 "
-    }
-    else if(props.score>=200){
-        comments = "Get Chocolate Ice Cream 🍦"
-    }
+    
+    let comments =`${
+    (props.score <= 60)
+    ?"You can do better 😀 "
+    :(props.score>=60 && props.score <=90)
+    ?" You almost get to 100 😁"
+    :(props.score>=90 && props.score <=120)
+    ?"You are doing great 👏 "
+    :(props.score>=120 && props.score <=150)
+    ?"Well done 🍕"
+    :(props.score>=150 && props.score <=200)
+    ?"WOW you are game Player 🍷 "
+    :(props.score>=200)
+    ?"Get Chocolate Ice Cream 🍦"
+    :""
+    } `
+    
+    
     return (
         <div className="popup">
             <div className="overlay">
