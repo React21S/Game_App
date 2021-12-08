@@ -108,7 +108,6 @@ body{
  
 }
 
-
 /* ####### Button ###### */
 button {
   font-family: "Special Elite", cursive;
@@ -165,14 +164,10 @@ footer{
   background-color: var(--bg-color-3);
 }
 
-
 footer p{ 
   font-family: var(--font-2);
   font-size: 1rem;
 }
-
-
-
 
 /* ------############# Mobile size iphone 5/SE #############-----------*/
 

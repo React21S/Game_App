@@ -41,6 +41,7 @@ class App extends Component {
   // clickHandler handler
   clickHandler = (id)=>{
     this.clickPlay();
+    
     // To stop the game if click wrong button
     if(this.state.current !==id){
       this.stopHandler();
