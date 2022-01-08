@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Game_App/static/css/main.8137e4bb.chunk.css",
+    "main.js": "/Game_App/static/js/main.fd4ce3b4.chunk.js",
+    "main.js.map": "/Game_App/static/js/main.fd4ce3b4.chunk.js.map",
+    "runtime-main.js": "/Game_App/static/js/runtime-main.b208ee47.js",
+    "runtime-main.js.map": "/Game_App/static/js/runtime-main.b208ee47.js.map",
+    "static/js/2.335be3bc.chunk.js": "/Game_App/static/js/2.335be3bc.chunk.js",
+    "static/js/2.335be3bc.chunk.js.map": "/Game_App/static/js/2.335be3bc.chunk.js.map",
+    "index.html": "/Game_App/index.html",
+    "static/css/main.8137e4bb.chunk.css.map": "/Game_App/static/css/main.8137e4bb.chunk.css.map",
+    "static/js/2.335be3bc.chunk.js.LICENSE.txt": "/Game_App/static/js/2.335be3bc.chunk.js.LICENSE.txt",
+    "static/media/endGame.74ec43b7.wav": "/Game_App/static/media/endGame.74ec43b7.wav",
+    "static/media/startGame.4203cc03.wav": "/Game_App/static/media/startGame.4203cc03.wav"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b208ee47.js",
+    "static/js/2.335be3bc.chunk.js",
+    "static/css/main.8137e4bb.chunk.css",
+    "static/js/main.fd4ce3b4.chunk.js"
+  ]
+}
