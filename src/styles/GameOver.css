@@ -41,11 +41,11 @@
 /* ------############# mobile #############-----------*/
 
 
-@media (max-width: 414px) {
+@media (max-width: 568px) {
   .overlay{
   padding: 20px;
   width:60%;
-  height: 70%;
+  height: 60%;
   }
 
   .overlay button{
@@ -54,6 +54,10 @@
     top: 3px;
     right: 10px; 
   }
+
+  footer{
+    position: fixed;
+}
 }
 
 /* ------############# Ipad Pro #############-----------*/
@@ -61,7 +65,7 @@
   .overlay{
     padding: 10px;
     width:60%;
-    height: 70%;
+    height: 60%;
     }
   
     .overlay button{
@@ -70,4 +74,20 @@
       top: 3px;
       right: 10px; 
     }
+
+    footer{
+      position: fixed;
+  }
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+  footer{
+      position: absolute;
+  }
+  .overlay{
+    padding: 10px;
+    width:60%;
+    height: 60%;
+    }
+
 }
